@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initiatives Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        .styled-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        .styled-table thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+        }
+        .styled-table th,
+        .styled-table td {
+            padding: 12px 15px;
+        }
+        .styled-table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .styled-table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        
+        .styled-table tbody tr:last-of-type {
+            border-bottom: 2px solid #009879;
+        }
+        
+        .styled-table tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+        
+        .high {
+            background-color: #98FB98;
+        }
+        .moderate {
+            background-color: #FFD700;
+        }
+        .low {
+            background-color: #FF6347;
+        }
+        .tooltip {
+            position: relative;
+            cursor: pointer;
+        }
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position above */
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<table class="styled-table">
+    <tr>
+        <th>Initiative</th>
+        <th>Timeframe</th>
+        <th>Relevance</th>
+        <th>Innovation</th>
+        <th>Feasibility</th>
+        <th>Impact</th>
+        <th>BPNT</th>
+    </tr>
+    <tr>
+        <td>Break Reminder Apps (Integrated in MeisterTask)</td>
+        <td>Short-Term</td>
+        <td class="relevance moderate tooltip">Relevance
+            <span class="tooltiptext">Addresses immediate stress, especially for desk workers.</span>
+        </td>
+        <td class="low tooltip">Innovation
+            <span class="tooltiptext">Break reminder apps are common.</span>
+        </td>
+        <td class="high tooltip">Feasibility
+            <span class="tooltiptext">Easy integration into existing tools.</span>
+        </td>
+        <td class="moderate tooltip">Impact
+            <span class="tooltiptext">Encourages healthier work habits, but impact varies per individual.</span>
+        </td>
+        <td>Autonomy (control over work habits)</td>
+    </tr>
+    <tr>
+        <td>Well-Being Check-ins by Managers</td>
+        <td>Short-Term</td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Directly supports employee well-being through personal contact.</span>
+        </td>
+        <td class="moderate tooltip">Moderate
+            <span class="tooltiptext">Not highly innovative but effective in small companies.</span>
+        </td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Requires minimal training and can be implemented quickly.</span>
+        </td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Builds trust, enhances communication, and addresses issues early.</span>
+        </td>
+        <td>Relatedness (enhances connections)</td>
+    </tr>
+    <tr>
+        <td>Virtual Meditation/Stretching Sessions for Remote Employees</td>
+        <td>Short-Term</td>
+        <td class="moderate tooltip">Moderate
+            <span class="tooltiptext">Supports remote workers but may not engage everyone.</span>
+        </td>
+        <td class="moderate tooltip">Moderate
+            <span class="tooltiptext">Innovative, particularly for remote settings.</span>
+        </td>
+        <td class="moderate tooltip">Moderate
+            <span class="tooltiptext">Requires coordination and possibly external professionals.</span>
+        </td>
+        <td class="moderate tooltip">Moderate
+            <span class="tooltiptext">Effective for those who participate, but voluntary nature limits reach.</span>
+        </td>
+        <td>Relatedness, Competence (community and well-being)</td>
+    </tr>
+    <tr>
+        <td>Centralized Mental Health Resources</td>
+        <td>Short-Term</td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Critical for ensuring employees have access to support.</span>
+        </td>
+        <td class="low tooltip">Low
+            <span class="tooltiptext">Standard practice, not innovative.</span>
+        </td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Simple to create and distribute.</span>
+        </td>
+        <td class="moderate tooltip">Moderate
+            <span class="tooltiptext">Useful as a resource, but engagement may vary.</span>
+        </td>
+        <td>Competence (access to knowledge and support)</td>
+    </tr>
+    <tr>
+        <td>Promote PTO and Breaks, Lead by Example</td>
+        <td>Short-Term</td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Essential for preventing burnout and improving work-life balance.</span>
+        </td>
+        <td class="low tooltip">Low
+            <span class="tooltiptext">Common practice in many organizations.</span>
+        </td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Easy to enforce and model by leadership.</span>
+        </td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Direct impact on work-life balance and culture.</span>
+        </td>
+        <td>Autonomy, Relatedness (work-life balance, culture)</td>
+    </tr>
+    <tr>
+        <td>Well-Being Workshops (Psychoeducation, Stress Management, etc.)</td>
+        <td>Long-Term</td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Empowers employees with knowledge and skills for well-being.</span>
+        </td>
+        <td class="moderate tooltip">Moderate
+            <span class="tooltiptext">Tailored workshops are effective but require ongoing commitment.</span>
+        </td>
+        <td class="moderate tooltip">Moderate
+            <span class="tooltiptext">Needs planning, external experts, and ongoing updates.</span>
+        </td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Long-term improvement in employee resilience and health.</span>
+        </td>
+        <td>Competence, Autonomy (skills, personal growth)</td>
+    </tr>
+    <tr>
+        <td>PERMA-Lead Leadership Training</td>
+        <td>Long-Term</td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Aligns with strategic goals of improving leadership and well-being.</span>
+        </td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Innovative and aligned with positive psychology research.</span>
+        </td>
+        <td class="low tooltip">Low
+            <span class="tooltiptext">Requires significant time, investment, and cultural change.</span>
+        </td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Potentially transformative for organizational culture and employee satisfaction.</span>
+        </td>
+        <td>Autonomy, Competence, Relatedness (holistic leadership)</td>
+    </tr>
+    <tr>
+        <td>Virtual-HQ for Remote Employees (e.g., Gather)</td>
+        <td>Long-Term</td>
+        <td class="moderate tooltip">Moderate
+            <span class="tooltiptext">Enhances remote work experience, fostering inclusion.</span>
+        </td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Cutting-edge solution for remote team engagement.</span>
+        </td>
+        <td class="low tooltip">Low
+            <span class="tooltiptext">Requires technology investment and employee adaptation.</span>
+        </td>
+        <td class="moderate tooltip">Moderate
+            <span class="tooltiptext">Can strengthen remote team connections, but success depends on adoption.</span>
+        </td>
+        <td>Relatedness (enhanced social connections)</td>
+    </tr>
+    <tr>
+        <td>Peer-Support System</td>
+        <td>Long-Term</td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Provides a valuable support network within the organization.</span>
+        </td>
+        <td class="moderate tooltip">Moderate
+            <span class="tooltiptext">Innovative, particularly for a company of this size.</span>
+        </td>
+        <td class="moderate tooltip">Moderate
+            <span class="tooltiptext">Requires training and careful management of confidentiality.</span>
+        </td>
+        <td class="high tooltip">High
+            <span class="tooltiptext">Fosters a supportive and inclusive culture.</span>
+        </td>
+        <td>Relatedness, Autonomy (peer connections, voluntary support)</td>
+    </tr>
+</table>
+
+</body>
+</html>
