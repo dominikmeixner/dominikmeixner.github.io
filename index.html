@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Initiatives Table</title>
     <style>
+
+    .item {
+      width: 100px;
+    }
+
         body {
             background: linear-gradient(90.1deg, rgb(255, 85, 85) 0.1%, rgb(85, 85, 255) 100%);
             margin: 0;
@@ -66,13 +71,13 @@
         }
         
         .high {
-            background-color: #98FB98;
+            background-color: rgba(85,85,255,0.6);
         }
         .moderate {
-            background-color: #FFD700;
+            background-color: rgba(170,85,171,0.6);
         }
         .low {
-            background-color: #FF6347;
+            background-color: rgba(255,84,84,0.6);
         }
         .tooltip {
             position: relative;
@@ -101,7 +106,7 @@
     </style>
 </head>
 <body>
-    <div calss="table-container">
+    <div calss="table-container container">
         <table class="styled-table">
             <tr>
                 <th>Initiative</th>
@@ -110,24 +115,22 @@
                 <th>Innovation</th>
                 <th>Feasibility</th>
                 <th>Impact</th>
-                <th>BPNT</th>
             </tr>
             <tr>
                 <td>Break Reminder Apps (Integrated in MeisterTask)</td>
                 <td>Short-Term</td>
-                <td class="relevance moderate tooltip">Relevance
+                <td class="moderate tooltip">Moderate
                     <span class="tooltiptext">Addresses immediate stress, especially for desk workers.</span>
                 </td>
-                <td class="low tooltip">Innovation
+                <td class="low tooltip">Low
                     <span class="tooltiptext">Break reminder apps are common.</span>
                 </td>
-                <td class="high tooltip">Feasibility
+                <td class="high tooltip">High
                     <span class="tooltiptext">Easy integration into existing tools.</span>
                 </td>
-                <td class="moderate tooltip">Impact
+                <td class="moderate tooltip">Moderate
                     <span class="tooltiptext">Encourages healthier work habits, but impact varies per individual.</span>
                 </td>
-                <td>Autonomy (control over work habits)</td>
             </tr>
             <tr>
                 <td>Well-Being Check-ins by Managers</td>
@@ -144,7 +147,6 @@
                 <td class="high tooltip">High
                     <span class="tooltiptext">Builds trust, enhances communication, and addresses issues early.</span>
                 </td>
-                <td>Relatedness (enhances connections)</td>
             </tr>
             <tr>
                 <td>Virtual Meditation/Stretching Sessions for Remote Employees</td>
@@ -161,7 +163,6 @@
                 <td class="moderate tooltip">Moderate
                     <span class="tooltiptext">Effective for those who participate, but voluntary nature limits reach.</span>
                 </td>
-                <td>Relatedness, Competence (community and well-being)</td>
             </tr>
             <tr>
                 <td>Centralized Mental Health Resources</td>
@@ -178,7 +179,6 @@
                 <td class="moderate tooltip">Moderate
                     <span class="tooltiptext">Useful as a resource, but engagement may vary.</span>
                 </td>
-                <td>Competence (access to knowledge and support)</td>
             </tr>
             <tr>
                 <td>Promote PTO and Breaks, Lead by Example</td>
@@ -195,7 +195,6 @@
                 <td class="high tooltip">High
                     <span class="tooltiptext">Direct impact on work-life balance and culture.</span>
                 </td>
-                <td>Autonomy, Relatedness (work-life balance, culture)</td>
             </tr>
             <tr>
                 <td>Well-Being Workshops (Psychoeducation, Stress Management, etc.)</td>
@@ -212,7 +211,6 @@
                 <td class="high tooltip">High
                     <span class="tooltiptext">Long-term improvement in employee resilience and health.</span>
                 </td>
-                <td>Competence, Autonomy (skills, personal growth)</td>
             </tr>
             <tr>
                 <td>PERMA-Lead Leadership Training</td>
@@ -229,7 +227,6 @@
                 <td class="high tooltip">High
                     <span class="tooltiptext">Potentially transformative for organizational culture and employee satisfaction.</span>
                 </td>
-                <td>Autonomy, Competence, Relatedness (holistic leadership)</td>
             </tr>
             <tr>
                 <td>Virtual-HQ for Remote Employees (e.g., Gather)</td>
@@ -246,7 +243,6 @@
                 <td class="moderate tooltip">Moderate
                     <span class="tooltiptext">Can strengthen remote team connections, but success depends on adoption.</span>
                 </td>
-                <td>Relatedness (enhanced social connections)</td>
             </tr>
             <tr>
                 <td>Peer-Support System</td>
@@ -263,7 +259,6 @@
                 <td class="high tooltip">High
                     <span class="tooltiptext">Fosters a supportive and inclusive culture.</span>
                 </td>
-                <td>Relatedness, Autonomy (peer connections, voluntary support)</td>
             </tr>
         </table>
     </div>
