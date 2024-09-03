@@ -16,20 +16,33 @@
             display: flex;
             align-items: center;
             justify-content: center;
-        }
+        } 
         
-        .table-container {
-            width: 60%; /* Adjust the width of the container as needed */
-            padding: 20vh 0; /* Padding that creates a 20% gap from the top and bottom */
+        div{
+            padding-top: 3%;
+            width: 80%;
             box-sizing: border-box; /* Include padding in the height calculations */
             display: flex;
             align-items: center;
             justify-content: center;
         }
+        table.rounded-corners {
+          border-spacing: 0;
+          border-collapse: separate;
+          border-radius: 10px;
+          border: 1px solid black;
+        }
         
         table {
-            width: 100%; /* Make the table take up the full width of the container */
+            width: 80%%; /* Make the table take up the full width of the container */
             border-collapse: collapse;
+            
+           line-height: 1.66em;
+           margin: 0;
+           
+           font-size: 15px;
+
+            
             /* Add more table styling as needed */
         }
         th, td {
@@ -37,6 +50,10 @@
             text-align: center;
             border: 2px solid #ddd;
             background-color: rgba(255,255,255,0.6);
+            line-height: 1.66em;
+            margin: 0;
+            font-family: 'Arial';
+            font-size: 18px;
         }
         .styled-table {
             border-collapse: collapse;
@@ -53,7 +70,7 @@
         }
         .styled-table th,
         .styled-table td {
-            padding: 12px 15px;
+            padding: 12px 19px;
         }
         .styled-table tbody tr {
             border-bottom: 1px solid #dddddd;
@@ -71,7 +88,7 @@
         }
         
         .high {
-            background-color: rgba(85,85,255,0.6);
+            background-color: rgba(85,85,255,0.8);
         }
         .moderate {
             background-color: rgba(170,85,171,0.6);
@@ -103,10 +120,16 @@
             visibility: visible;
             opacity: 1;
         }
+        .short-term{
+            background-color: rgba(255,255,85,0.5);
+        }
+        .long-term{
+            background-color: rgba(10,255,255,0.5);
+        }
     </style>
 </head>
 <body>
-    <div calss="table-container container">
+    <div calss="table-container">
         <table class="styled-table">
             <tr>
                 <th>Initiative</th>
@@ -115,10 +138,11 @@
                 <th>Innovation</th>
                 <th>Feasibility</th>
                 <th>Impact</th>
+                <th>BPNT</th>
             </tr>
             <tr>
                 <td>Break Reminder Apps (Integrated in MeisterTask)</td>
-                <td>Short-Term</td>
+                <td class="short-term">Short-Term</td>
                 <td class="moderate tooltip">Moderate
                     <span class="tooltiptext">Addresses immediate stress, especially for desk workers.</span>
                 </td>
@@ -131,10 +155,11 @@
                 <td class="moderate tooltip">Moderate
                     <span class="tooltiptext">Encourages healthier work habits, but impact varies per individual.</span>
                 </td>
+                <td>Autonomy (control over work habits)</td>
             </tr>
             <tr>
                 <td>Well-Being Check-ins by Managers</td>
-                <td>Short-Term</td>
+                <td class="short-term">Short-Term</td>
                 <td class="high tooltip">High
                     <span class="tooltiptext">Directly supports employee well-being through personal contact.</span>
                 </td>
@@ -147,10 +172,11 @@
                 <td class="high tooltip">High
                     <span class="tooltiptext">Builds trust, enhances communication, and addresses issues early.</span>
                 </td>
+                <td>Relatedness (enhances connections)</td>
             </tr>
             <tr>
                 <td>Virtual Meditation/Stretching Sessions for Remote Employees</td>
-                <td>Short-Term</td>
+                <td class="short-term">Short-Term</td>
                 <td class="moderate tooltip">Moderate
                     <span class="tooltiptext">Supports remote workers but may not engage everyone.</span>
                 </td>
@@ -163,10 +189,11 @@
                 <td class="moderate tooltip">Moderate
                     <span class="tooltiptext">Effective for those who participate, but voluntary nature limits reach.</span>
                 </td>
+                <td>Relatedness, Competence (community and well-being)</td>
             </tr>
             <tr>
                 <td>Centralized Mental Health Resources</td>
-                <td>Short-Term</td>
+                <td class="short-term">Short-Term</td>
                 <td class="high tooltip">High
                     <span class="tooltiptext">Critical for ensuring employees have access to support.</span>
                 </td>
@@ -179,10 +206,11 @@
                 <td class="moderate tooltip">Moderate
                     <span class="tooltiptext">Useful as a resource, but engagement may vary.</span>
                 </td>
+                <td>Competence (access to knowledge and support)</td>
             </tr>
             <tr>
                 <td>Promote PTO and Breaks, Lead by Example</td>
-                <td>Short-Term</td>
+                <td class="short-term">Short-Term</td>
                 <td class="high tooltip">High
                     <span class="tooltiptext">Essential for preventing burnout and improving work-life balance.</span>
                 </td>
@@ -195,10 +223,11 @@
                 <td class="high tooltip">High
                     <span class="tooltiptext">Direct impact on work-life balance and culture.</span>
                 </td>
+                <td>Autonomy, Relatedness (work-life balance, culture)</td>
             </tr>
             <tr>
                 <td>Well-Being Workshops (Psychoeducation, Stress Management, etc.)</td>
-                <td>Long-Term</td>
+                <td class="long-term">Long-Term</td>
                 <td class="high tooltip">High
                     <span class="tooltiptext">Empowers employees with knowledge and skills for well-being.</span>
                 </td>
@@ -211,10 +240,11 @@
                 <td class="high tooltip">High
                     <span class="tooltiptext">Long-term improvement in employee resilience and health.</span>
                 </td>
+                <td>Competence, Autonomy (skills, personal growth)</td>
             </tr>
             <tr>
                 <td>PERMA-Lead Leadership Training</td>
-                <td>Long-Term</td>
+                <td class="long-term">Long-Term</td>
                 <td class="high tooltip">High
                     <span class="tooltiptext">Aligns with strategic goals of improving leadership and well-being.</span>
                 </td>
@@ -227,10 +257,11 @@
                 <td class="high tooltip">High
                     <span class="tooltiptext">Potentially transformative for organizational culture and employee satisfaction.</span>
                 </td>
+                <td>Autonomy, Competence, Relatedness (holistic leadership)</td>
             </tr>
             <tr>
                 <td>Virtual-HQ for Remote Employees (e.g., Gather)</td>
-                <td>Long-Term</td>
+                <td class="long-term">Long-Term</td>
                 <td class="moderate tooltip">Moderate
                     <span class="tooltiptext">Enhances remote work experience, fostering inclusion.</span>
                 </td>
@@ -243,10 +274,11 @@
                 <td class="moderate tooltip">Moderate
                     <span class="tooltiptext">Can strengthen remote team connections, but success depends on adoption.</span>
                 </td>
+                <td>Relatedness (enhanced social connections)</td>
             </tr>
             <tr>
                 <td>Peer-Support System</td>
-                <td>Long-Term</td>
+                <td class="long-term">Long-Term</td>
                 <td class="high tooltip">High
                     <span class="tooltiptext">Provides a valuable support network within the organization.</span>
                 </td>
@@ -259,6 +291,7 @@
                 <td class="high tooltip">High
                     <span class="tooltiptext">Fosters a supportive and inclusive culture.</span>
                 </td>
+                <td>Relatedness, Autonomy (peer connections, voluntary support)</td>
             </tr>
         </table>
     </div>
