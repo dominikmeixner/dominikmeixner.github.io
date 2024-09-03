@@ -18,7 +18,7 @@
             justify-content: center;
         } 
         
-        div{
+        div.table-container{
             padding-top: 2%;
             width: 80%;
             box-sizing: border-box; /* Include padding in the height calculations */
@@ -126,11 +126,59 @@
         .long-term{
             background-color: rgba(10,255,255,0.5);
         }
+        
+
+        .info-icon {
+            margin-left: 10px;
+            cursor: pointer;
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+        }
+
+        .info-icon img {
+            width: 100%;
+            height: auto;
+        }
+
+        .info-icon .info-tooltip {
+            visibility: hidden;
+            width: 300px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 150%; /* Position above */
+            left: 50%;
+            margin-left: -150px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .info-icon:hover .info-tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        caption{
+            text-align: right;
+        }
     </style>
 </head>
 <body>
-    <div calss="table-container">
-        <table class="styled-table">
+    <div class="table-container">
+        <table class="styled-table">#
+            <caption>
+                <!-- Added Info Icon with Tooltip -->
+                <span class="info-icon">
+                    <img src="i.png" alt="i">
+                    <span class="info-tooltip">This table provides an overview of various initiatives. Hover over the cells with a dotted underline for more details.</span>
+                </span>
+            </caption>
             <tr>
                 <th>Initiative</th>
                 <th>Timeframe</th>
