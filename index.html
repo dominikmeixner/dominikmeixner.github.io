@@ -138,8 +138,9 @@
         }
 
         .info-icon img {
-            width: 100%;
+            width: 3.5vh;
             height: auto;
+            filter: invert(100%);
         }
 
         .info-icon .info-tooltip {
@@ -152,8 +153,8 @@
             padding: 5px;
             position: absolute;
             z-index: 1;
-            bottom: 150%; /* Position above */
-            left: 50%;
+            top: 150%; /* Position above */
+            right: 50%;
             margin-left: -150px;
             opacity: 0;
             transition: opacity 0.3s;
